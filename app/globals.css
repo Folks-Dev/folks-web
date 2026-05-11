@@ -11,7 +11,8 @@
   }
 
   @keyframes pulse-cursor {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
     }
     50% {
@@ -24,8 +25,10 @@
 }
 
 :root {
-  --background: #02040a; 
+  --background: #050505;
   --foreground: #ffffff;
+  --accent: #0918d0;
+  --accent-soft: rgba(9, 24, 208, 0.3);
 }
 
 html {
@@ -35,7 +38,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-oxanium),
+    system-ui,
+    -apple-system,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

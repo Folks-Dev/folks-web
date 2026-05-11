@@ -2,20 +2,32 @@ import { Container } from "./container";
 
 export function Navbar() {
   return (
-    <header className="w-full"> {/* Removida a borda */}
+    <header className="w-full">
       <Container>
         <div className="relative flex items-center justify-center h-24">
-          <h1 className="absolute left-0 text-2xl font-bold tracking-tighter flex items-center gap-1">
-            {/* Se tiver o logo em SVG, substitua aqui */}
-            <span className="text-blue-500"></span> folks<span className="text-blue-600">.</span>
-          </h1>
+          <div className="absolute left-0 flex items-center gap-3">
+            <img src="/logo/folks.svg" alt="FOLKS" className="h-6 w-auto" />
+          </div>
 
-          <nav className="hidden md:flex items-center gap-10 text-sm font-light text-zinc-400">
-            {["Início", "Serviços", "Projetos", "Processo", "Equipe", "Contatos"].map((item) => (
-              <a key={item} href="#" className="hover:text-white transition-colors uppercase tracking-tight">
-                {item}
-              </a>
-            ))}
+          <nav className="hidden lg:flex items-center gap-8 text-[13px] tracking-[0.2em] text-zinc-200 uppercase">
+            <a href="#inicio" className="hover:text-white transition-colors">
+              Início
+            </a>
+            <a href="#servicos" className="hover:text-white transition-colors">
+              Serviços
+            </a>
+            <a href="#projetos" className="hover:text-white transition-colors">
+              Projetos
+            </a>
+            <a href="#processo" className="hover:text-white transition-colors">
+              Processo
+            </a>
+            <a href="#equipe" className="hover:text-white transition-colors">
+              Equipe
+            </a>
+            <a href="#contato" className="hover:text-white transition-colors">
+              Contatos
+            </a>
           </nav>
         </div>
       </Container>
