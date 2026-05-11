@@ -9,9 +9,9 @@ import { Footer } from "@/components/layout/footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative overflow-x-clip">
       <Navbar />
-      <div id="inicio" className="sr-only" />
+      <div id="home" className="sr-only" />
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />

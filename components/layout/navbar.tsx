@@ -1,33 +1,36 @@
 import { Container } from "./container";
 
+const links = [
+  { href: "#home", label: "Home" },
+  { href: "#servicos", label: "Serviços" },
+  { href: "#projetos", label: "Projetos" },
+  { href: "#processo", label: "Processo" },
+  { href: "#equipe", label: "Equipe" },
+  { href: "#contato", label: "Contatos" },
+];
+
 export function Navbar() {
   return (
-    <header className="w-full">
+    <header className="absolute inset-x-0 top-0 z-30 w-full">
       <Container>
-        <div className="relative flex items-center justify-center h-24">
+        <div className="relative flex h-24 items-center justify-center">
           <div className="absolute left-0 flex items-center gap-3">
             <img src="/logo/folks.svg" alt="FOLKS" className="h-6 w-auto" />
           </div>
 
-          <nav className="hidden lg:flex items-center gap-8 text-[13px] tracking-[0.2em] text-zinc-200 uppercase">
-            <a href="#inicio" className="hover:text-white transition-colors">
-              Início
-            </a>
-            <a href="#servicos" className="hover:text-white transition-colors">
-              Serviços
-            </a>
-            <a href="#projetos" className="hover:text-white transition-colors">
-              Projetos
-            </a>
-            <a href="#processo" className="hover:text-white transition-colors">
-              Processo
-            </a>
-            <a href="#equipe" className="hover:text-white transition-colors">
-              Equipe
-            </a>
-            <a href="#contato" className="hover:text-white transition-colors">
-              Contatos
-            </a>
+          <nav className="hidden items-center gap-5 lg:flex">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="group inline-flex origin-center items-center justify-center overflow-hidden rounded-full border border-transparent px-4 py-1.5 text-[10px] font-medium uppercase tracking-[0.28em] text-white/72 transition-all duration-300 hover:scale-110 hover:border-white/10 hover:bg-white/[0.04] hover:text-white"
+              >
+                <span className="relative">
+                  {link.label}
+                  <span className="absolute inset-x-0 -bottom-1 h-px origin-center scale-x-0 bg-white transition-transform duration-300 group-hover:scale-x-100" />
+                </span>
+              </a>
+            ))}
           </nav>
         </div>
       </Container>

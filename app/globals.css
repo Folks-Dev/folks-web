@@ -25,10 +25,13 @@
 }
 
 :root {
-  --background: #050505;
+  --background: #06070b;
   --foreground: #ffffff;
-  --accent: #0918d0;
-  --accent-soft: rgba(9, 24, 208, 0.3);
+  --accent: #2c38ff;
+  --accent-soft: rgba(44, 56, 255, 0.26);
+  --surface: #0d1018;
+  --surface-alt: #10131d;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
 html {
@@ -36,15 +39,61 @@ html {
 }
 
 body {
-  background: var(--background);
+  position: relative;
+  background:
+    radial-gradient(circle at top, rgba(57, 66, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #070811 0%, #06070b 32%, #090b12 100%);
   color: var(--foreground);
   font-family:
-    var(--font-oxanium),
+    var(--font-montserrat),
     system-ui,
     -apple-system,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  z-index: -1;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(110px);
+}
+
+body::before {
+  top: -12rem;
+  right: -16rem;
+  width: 32rem;
+  height: 32rem;
+  background: rgba(116, 83, 255, 0.3);
+}
+
+body::after {
+  top: 28rem;
+  left: -12rem;
+  width: 22rem;
+  height: 22rem;
+  background: rgba(125, 61, 255, 0.26);
+}
+
+@media (min-width: 768px) {
+  body::before {
+    top: -22rem;
+    right: -18rem;
+    width: 50rem;
+    height: 50rem;
+  }
+
+  body::after {
+    top: 34rem;
+    left: -16rem;
+    width: 44rem;
+    height: 44rem;
+  }
 }
 
 ::-webkit-scrollbar {

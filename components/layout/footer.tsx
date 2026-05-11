@@ -9,7 +9,7 @@ export function Footer() {
             <img src="/logo/folks.svg" alt="FOLKS" className="h-5 w-auto" />
           </div>
           <p className="text-[12px] text-zinc-500">
-            Tecnologia, design e inovacao para negocios modernos.
+            Tecnologia, design e inovação para negócios modernos.
           </p>
         </div>
       </Container>
