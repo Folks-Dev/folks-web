@@ -25,9 +25,13 @@ export function ProjectsSection() {
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,rgba(24,29,45,0.94)_0%,rgba(16,18,27,0.94)_100%)] p-5 md:p-8">
               <div className="overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#11141d]">
-                <div className="flex items-center gap-3 border-b border-white/8 bg-[#171b26] px-4 py-3 text-[12px] text-white/50">
+                <div className="flex items-center gap-4 border-b border-white/8 bg-[#171b26] px-4 py-3 text-[12px] text-white/50">
                   <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#6b7280]" />
+                    <span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
+                    <span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
+                    <span className="h-3 w-3 rounded-full bg-[#27c93f]" />
+                  </div>
+                  <div className="flex items-center ml-2">
                     <span className="text-white/80">folks.tsx</span>
                   </div>
                 </div>
