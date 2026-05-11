@@ -1,5 +1,23 @@
+"use client";
+
 import { Globe, Laptop, Cpu, Settings } from "lucide-react";
 import { Container } from "../layout/container";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+};
 
 const services = [
   {
@@ -34,43 +52,57 @@ export function ServicesSection() {
       <Container>
         <div className="px-6 py-10 md:px-10 md:py-14">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-14">
-            <div className="space-y-6">
-              <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="space-y-6"
+            >
+              <p className="text-[12px] md:text-[13px] font-medium uppercase tracking-[0.32em] text-white/58">
                 Soluções
               </p>
-              <h2 className="max-w-[380px] text-[2.35rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white md:text-[3.2rem]">
+              <h2 className="max-w-[500px] text-[3rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white md:text-[4rem] lg:text-[4.5rem]">
                 Soluções tech
                 <br />
                 do início ao fim.
               </h2>
-              <p className="max-w-[392px] text-[14px] leading-7 text-white/62">
+              <p className="max-w-[480px] text-[16px] md:text-[18px] leading-8 text-white/62">
                 Da ideia ao deploy - construimos produtos digitais que funcionam
                 de verdade, com tecnologia de ponta e atenção a cada detalhe do
                 seu negócio.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, margin: "-100px" }}
+              className="grid grid-cols-1 gap-6 md:grid-cols-2"
+            >
               {services.map((service) => (
-                <div
+                <motion.div
+                  variants={itemVariants}
+                  whileHover={{ y: -5 }}
                   key={service.title}
-                  className="min-h-[184px] rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-[10px] transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
+                  className="min-h-[200px] rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6 py-6 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-[10px] transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.06]"
                 >
-                  <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-[0.95rem] border border-white/10 bg-black/20">
+                  <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-[0.95rem] border border-white/10 bg-black/20">
                     {service.icon}
                   </div>
 
                   <div className="space-y-3">
-                    <h3 className="text-[13px] font-semibold tracking-[0.02em] text-white">
+                    <h3 className="text-[16px] md:text-[18px] font-semibold tracking-[0.02em] text-white">
                       {service.title}
                     </h3>
-                    <p className="text-[13px] leading-6 text-white/58">
+                    <p className="text-[14px] leading-7 text-white/58">
                       {service.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </Container>
