@@ -9,9 +9,9 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "FOLKS | Tecnologia e Design",
+  title: "folks",
   description:
-    "FOLKS cria produtos digitais com tecnologia, design e inovacao.",
+    "Suas ideias, nossas ações.",
 };
 
 export default function RootLayout({
