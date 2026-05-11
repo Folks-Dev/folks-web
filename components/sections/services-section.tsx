@@ -30,9 +30,9 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="relative py-28 md:py-36" id="servicos">
+    <section className="relative py-12 md:py-20" id="servicos">
       <Container>
-        <div className="rounded-[2rem] border border-[var(--border)] bg-[rgba(10,12,18,0.82)] px-6 py-10 backdrop-blur-sm md:px-10 md:py-14">
+        <div className="px-6 py-10 md:px-10 md:py-14">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-14">
             <div className="space-y-6">
               <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
@@ -54,7 +54,7 @@ export function ServicesSection() {
               {services.map((service) => (
                 <div
                   key={service.title}
-                  className="min-h-[184px] rounded-[1.5rem] border border-white/7 bg-[rgba(10,12,18,0.34)] px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-[10px] transition-all duration-300 hover:-translate-y-1 hover:border-white/14 hover:bg-[rgba(255,255,255,0.04)]"
+                  className="min-h-[184px] rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-[10px] transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
                 >
                   <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-[0.95rem] border border-white/10 bg-black/20">
                     {service.icon}

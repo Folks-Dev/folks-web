@@ -19,9 +19,9 @@ const codeLines = [
 
 export function ProjectsSection() {
   return (
-    <section className="relative py-28 md:py-36" id="projetos">
+    <section className="relative py-12 md:py-20" id="projetos">
       <Container>
-        <div className="rounded-[2rem] border border-[var(--border)] bg-[rgba(8,10,16,0.94)] px-6 py-10 md:px-10 md:py-14">
+        <div className="px-6 py-10 md:px-10 md:py-14">
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="rounded-[1.75rem] bg-[linear-gradient(180deg,rgba(24,29,45,0.94)_0%,rgba(16,18,27,0.94)_100%)] p-5 md:p-8">
               <div className="overflow-hidden rounded-[1.4rem] border border-white/8 bg-[#11141d]">

@@ -28,9 +28,9 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="py-28 md:py-36" id="processo">
+    <section className="py-12 md:py-20" id="processo">
       <Container>
-        <div className="rounded-[2rem] border border-[var(--border)] bg-[rgba(10,12,18,0.72)] px-6 py-10 md:px-10 md:py-14">
+        <div className="px-6 py-10 md:px-10 md:py-14">
           {" "}
           <div className="space-y-4 text-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
@@ -50,7 +50,7 @@ export function ProcessSection() {
             {steps.map((step, index) => (
               <div
                 key={step.title}
-                className="rounded-[1.5rem] border border-white/8 bg-black/[0.16] px-5 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/14"
+                className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-5 py-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
               >
                 <div className="mx-auto mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/12 text-[12px] font-semibold text-white/86">
                   {index + 1}

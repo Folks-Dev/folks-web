@@ -25,9 +25,9 @@ const team = [
 
 export function TeamSection() {
   return (
-    <section className="py-28 md:py-36" id="equipe">
+    <section className="py-12 md:py-20" id="equipe">
       <Container>
-        <div className="rounded-[2rem] border border-[var(--border)] bg-[rgba(8,10,16,0.78)] px-6 py-10 md:px-10 md:py-14">
+        <div className="px-6 py-10 md:px-10 md:py-14">
           <div className="space-y-4 text-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
               Nós
@@ -44,7 +44,7 @@ export function TeamSection() {
             {team.map((member) => (
               <div
                 key={member.name}
-                className="rounded-[1.6rem] border border-white/7 bg-[rgba(10,12,18,0.32)] p-6 text-center shadow-[0_20px_60px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 hover:-translate-y-1 hover:border-white/14"
+                className="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-6 text-center shadow-[0_20px_60px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.06]"
               >
                 <div className="mx-auto mb-5 h-20 w-20 overflow-hidden rounded-full border border-white/12 bg-[#0e1117]">
                   <img

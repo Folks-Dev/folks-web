@@ -2,9 +2,9 @@ import { Container } from "../layout/container";
 
 export function CtaSection() {
   return (
-    <section className="py-24 md:py-32" id="contato">
+    <section className="py-12 md:py-20" id="contato">
       <Container>
-        <div className="rounded-[2rem] border border-white/8 bg-[linear-gradient(180deg,rgba(12,15,24,0.5)_0%,rgba(8,10,16,0.38)_100%)] px-6 py-12 text-center shadow-[0_24px_80px_rgba(0,0,0,0.2)] backdrop-blur-[12px] md:px-10">
+        <div className="px-6 py-12 text-center md:px-10">
           {" "}
           <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
             Vamos conversar

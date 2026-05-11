@@ -40,9 +40,12 @@ html {
 
 body {
   position: relative;
-  background:
+  background-color: #06070b;
+  background-image:
     radial-gradient(circle at top, rgba(57, 66, 255, 0.16), transparent 34%),
     linear-gradient(180deg, #070811 0%, #06070b 32%, #090b12 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--foreground);
   font-family:
     var(--font-montserrat),
