@@ -62,7 +62,7 @@ export function ProjectsSection() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className="space-y-6"
             >
               <p className="text-[12px] md:text-[13px] font-medium uppercase tracking-[0.32em] text-white/58">
