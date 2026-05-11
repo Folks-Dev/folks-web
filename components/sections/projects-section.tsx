@@ -49,7 +49,7 @@ export function ProjectsSection() {
                 Sobre a folks
               </p>
               <h3 className="text-[2.1rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white md:text-[2.9rem]">
-                Somos tres.
+                Somos três.
               </h3>
               <p className="max-w-[541px] text-[14px] leading-8 text-white/62">
                 A Folks nasceu da vontade de três amigos de criar tecnologia que

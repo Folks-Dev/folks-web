@@ -30,13 +30,13 @@ export function TeamSection() {
         <div className="rounded-[2rem] border border-[var(--border)] bg-[rgba(8,10,16,0.78)] px-6 py-10 md:px-10 md:py-14">
           <div className="space-y-4 text-center">
             <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/58">
-              Nos
+              Nós
             </p>
             <h3 className="text-[2.1rem] font-semibold leading-[1.05] tracking-[-0.05em] text-white md:text-[2.8rem]">
-              As pessoas por tras da Folks.
+              As pessoas por trás da Folks.
             </h3>
             <p className="mx-auto max-w-xl text-[14px] leading-7 text-white/60">
-              Tres pessoas, um proposito: criar tecnologia que faz diferenca.
+              Três pessoas, um propósito: criar tecnologia que faz diferença.
             </p>
           </div>
 
