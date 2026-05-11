@@ -2,16 +2,20 @@ import { Container } from "./container";
 
 export function Navbar() {
   return (
-    <header className="w-full border-b border-white/10">
+    <header className="w-full"> {/* Removida a borda */}
       <Container>
-        <div className="flex items-center justify-between h-20">
-          <h1 className="text-2xl font-bold">Folks</h1>
+        <div className="relative flex items-center justify-center h-24">
+          <h1 className="absolute left-0 text-2xl font-bold tracking-tighter flex items-center gap-1">
+            {/* Se tiver o logo em SVG, substitua aqui */}
+            <span className="text-blue-500"></span> folks<span className="text-blue-600">.</span>
+          </h1>
 
-          <nav className="flex items-center gap-6">
-            <a href="#">Home</a>
-            <a href="#">Serviços</a>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
+          <nav className="hidden md:flex items-center gap-10 text-sm font-light text-zinc-400">
+            {["Início", "Serviços", "Projetos", "Processo", "Equipe", "Contatos"].map((item) => (
+              <a key={item} href="#" className="hover:text-white transition-colors uppercase tracking-tight">
+                {item}
+              </a>
+            ))}
           </nav>
         </div>
       </Container>
