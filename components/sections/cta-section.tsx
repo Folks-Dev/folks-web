@@ -4,6 +4,11 @@ import { Container } from "../layout/container";
 import { motion } from "framer-motion";
 
 export function CtaSection() {
+  const email = "folksdevsolutions@gmail.com";
+  const telefone = "5511975232132";
+  const mensagemWhats = encodeURIComponent("Olá! Gostaria de conversar sobre um projeto com a Folks.");
+  const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent("Projeto em Mente")}&body=${encodeURIComponent("Olá Folks, gostaria de conversar sobre um projeto.")}`;
+
   return (
     <section className="py-20 md:py-32" id="contato">
       <Container>
@@ -27,24 +32,29 @@ export function CtaSection() {
             para o seu negócio.
           </p>
           <div className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <motion.button 
+            <motion.a 
+              href={gmailLink}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="rounded-full bg-white px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#090b11] shadow-[0_0_40px_rgba(255,255,255,0.15)]"
+              className="inline-flex rounded-full bg-white px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-[#090b11] shadow-[0_0_40px_rgba(255,255,255,0.15)]"
             >
               Enviar email
-            </motion.button>
-            <motion.button 
+            </motion.a>
+            <motion.a 
+              href={`https://wa.me/${telefone}?text=${mensagemWhats}`}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.06)" }}
               whileTap={{ scale: 0.95 }}
-              className="rounded-full border border-white/12 bg-white/[0.03] px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-white/20"
+              className="inline-flex rounded-full border border-white/12 bg-white/[0.03] px-10 py-4 text-[13px] font-semibold uppercase tracking-[0.18em] text-white transition-colors duration-300 hover:border-white/20"
             >
               WhatsApp
-            </motion.button>
+            </motion.a>
           </div>
         </motion.div>
       </Container>
     </section>
   );
 }
-
